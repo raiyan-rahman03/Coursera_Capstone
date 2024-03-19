@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'capstone.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'capstone',  # Specify your MySQL database name
+        'USER': 'root',  # Specify your MySQL username
+        'PASSWORD': 'root123',  # Specify your MySQL password
+        'HOST': 'localhost',  # Specify your MySQL host (usually 'localhost')
+        'PORT': '3306',  # Specify your MySQL port (usually '3306')
     }
 }
 
