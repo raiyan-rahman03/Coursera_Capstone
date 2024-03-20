@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
     'reservation',
+    'rest_framework',
+    'rest_framework.authtoken',
+  
+    'djoser',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +135,13 @@ STATICFILES_DIRS = [
     # For example, project-wide CSS, JavaScript, and image files.
       "C:/Users/Admin/Desktop/co_capstone/Coursera_Capstone/capstone/capstone/static"
     ]
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        # Add other authentication classes if needed
+    ],
+    # Other REST framework settings...
+}
+
+DJOSER={"USER_ID_FIELD":"username"}

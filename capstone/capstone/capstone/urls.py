@@ -28,5 +28,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('resturant/',include("reservation.urls")), 
     path('restaurant/booking/', include(router.urls)),
+   
     
 ]
